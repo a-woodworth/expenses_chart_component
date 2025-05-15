@@ -1,0 +1,247 @@
+:root {
+  /* Colors */
+  --blue-500: hsl(186 34% 65%);
+  --brown-400: hsl(28 10% 53%);
+  --brown-950: hsl(25 47% 15%);
+  --cream-bg: hsl(27 66% 92%);
+  --off-white: hsl(33 100% 98%);
+  --red-100: hsl(26 66% 93%);
+  /* --red-500: hsl(10 79% 65%); */
+  --red-500: hsl(16 100% 42%);
+  --white: hsl(0 0% 100%);
+
+  /* Radius */
+  --radius-xs: 0.1875rem;
+  --radius-s: 0.3125rem;
+  --radius-m: 0.625rem;
+  --radius-l: 1.25rem;
+
+  /* Spacing */
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.125rem; /* 18px */
+  --spacing-300: 1.25rem; /* 20px */
+  --spacing-350: 1.5rem; /* 24px */
+  --spacing-400: 1.625rem; /* 26px */
+  --spacing-500: 2rem; /* 32px */
+  --spacing-600: 2.5rem; /* 40px */
+  --spacing-700: 3.25rem; /*52px */
+  --spacing-800: 4.125rem; /*66px */
+
+  /* Typography */
+  --font-base: 'DM Sans', sans-serif;
+  --leading-standard: 1.3;
+  --text-1: 600 3rem/1.3 var(--font-base);
+  --text-1-mobile: 600 1.875rem/1.3 var(--font-base);
+  --text-2: 600 2rem/1.3 var(--font-base);
+  --text-2-mobile: 600 1.5rem/1.3 var(--font-base);
+  --text-3: 400 1.125rem/1.3 var(--font-base);
+  --text-3-mobile: 400 0.9375rem/1.3 var(--font-base);
+  --text-3-bold: 700 1.125rem/1.3 var(--font-base);
+  --text-3-bold-mobile: 700 0.9375rem/1.3 var(--font-base);
+  --text-4: 400 0.9375rem/1.3 var(--font-base);
+  --text-4-mobile: 400 0.75rem/1.3 var(--font-base);
+}
+
+/* CSS Reset/Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: currentColor;
+}
+
+a:focus {
+  outline: 3px dotted currentColor;
+  outline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Screen reader styles */
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: var(--cream-bg);
+  color: var(--brown-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-350);
+  font-family: 'DM Sans', sans-serif;
+  line-height: var(--leading-standard);
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+.chart {
+  max-width: 33.75rem;
+  margin: auto;
+}
+
+.chart__header,
+.chart-table-wrapper {
+  border-radius: var(--radius-m);
+  margin-inline: var(--spacing-200);
+}
+
+.chart__header {
+  background-color: var(--red-500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: var(--spacing-200);
+  padding-block-start: var(--spacing-300);
+  padding-block-end: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+}
+
+.chart-table-wrapper {
+  background-color: var(--off-white);
+  padding-block: var(--spacing-350);
+  padding-inline: var(--spacing-300);
+}
+
+.chart__heading {
+  color: var(--white);
+  font: var(--text-3-mobile);
+  margin-block-end: var(--spacing-50);
+}
+
+.chart__logo {
+  width: 3.75rem;
+}
+
+.chart__balance {
+  color: var(--white);
+  font: var(--text-2-mobile);
+  letter-spacing: 0.01em;
+}
+
+.chart__table {
+  border-bottom: 2px solid var(--cream-bg);
+  margin-block-end: var(--spacing-350);
+  padding-block-end: var(--spacing-350);
+  width: 100%;
+}
+
+.chart__table caption {
+  color: var(--brown-950);
+  font: var(--text-2-mobile);
+  margin-block-end: var(--spacing-150);
+  text-align: left;
+}
+
+.chart__footer {
+  display: flex;
+  justify-content: space-between;
+  font: var(--text-4);
+  gap: var(--spacing-200);
+}
+
+.chart__total {
+  flex-basis: 50%;
+}
+
+.chart__total-amount {
+  color: var(--brown-950);
+  font: var(--text-1-mobile);
+}
+
+.chart__percentage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  flex-basis: 50%;
+}
+
+.chart__percentage-value {
+  color: var(--brown-950);
+  font: var(--text-3-bold-mobile);
+}
+
+.main-footer {
+  font: var(--text-4-mobile);
+  text-align: center;
+  text-wrap: balance;
+}
+
+@media (min-width: 33.75rem) {
+  .chart__heading {
+    font: var(--text-3);
+  }
+
+  .chart__balance {
+    font: var(--text-2);
+  }
+
+  .chart__logo {
+    width: 4.5rem;
+  }
+
+  .chart-table-wrapper {
+    padding-block-start: var(--spacing-500);
+    padding-block-end: var(--spacing-600);
+    padding-inline: var(--spacing-600);
+  }
+
+  .chart__table caption {
+    font: var(--text-2);
+    margin-block-end: var(--spacing-250);
+  }
+
+  .chart__footer {
+    font: var(--text-3);
+  }
+
+  .chart__total-amount {
+    var(--text-1);
+  }
+
+  .chart__percentage-value {
+    font: var(--text-3-bold);
+  }
+}

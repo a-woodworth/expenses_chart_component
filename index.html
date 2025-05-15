@@ -12,6 +12,18 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Expenses Chart Component</title>
   </head>
 
@@ -20,12 +32,10 @@
       <h1 class="sr-only">
         Frugal Financial - Helping You Manage Your Expenses
       </h1>
-      <section aria-labelledby="chart-heading">
-        <div class="chart">
-          <div class="chart__header">
-            <h2 id="chart-heading" class="chart__heading">
-              My balance
-            </h2>
+      <div class="chart">
+        <div class="chart__header">
+          <div class="chart-header-wrapper">
+            <h2 class="chart__heading">My balance</h2>
             <p class="chart__balance">$921.48</p>
           </div>
           <img
@@ -35,53 +45,60 @@
             aria-hidden="true"
           />
         </div>
-        <table class="chart__table">
-          <caption>
-            Spending - Last 7 days
-          </caption>
-          <tr class="chart__table-header">
-            <th scope="col">Day</th>
-            <th scope="col">Amount</th>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Mon</td>
-            <td class="chart__table-amount">$17.45</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Tue</td>
-            <td class="chart__table-amount">$34.91</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Wed</td>
-            <td class="chart__table-amount">$52.36</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Thu</td>
-            <td class="chart__table-amount">$31.07</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Fri</td>
-            <td class="chart__table-amount">$23.39</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Sat</td>
-            <td class="chart__table-amount">$43.28</td>
-          </tr>
-          <tr>
-            <td class="chart__table-day">Sun</td>
-            <td class="chart__table-amount">$25.48</td>
-          </tr>
-        </table>
-        <div class="chart__footer">
-          <p class="chart__total">
-            Total this month
-            <span class="chart__total-amount">$478.33</span>
-          </p>
-          <p class="chart__percentage">
-            <span>+2.4%</span> from last month
-          </p>
+        <div class="chart-table-wrapper">
+          <table class="chart__table">
+            <caption>
+              Spending - Last 7 days
+            </caption>
+            <thead>
+              <tr class="chart__table-header">
+                <th scope="col" class="sr-only">Day</th>
+                <th scope="col" class="sr-only">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="chart__table-day">Mon</td>
+                <td class="chart__table-amount">$17.45</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Tue</td>
+                <td class="chart__table-amount">$34.91</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Wed</td>
+                <td class="chart__table-amount">$52.36</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Thu</td>
+                <td class="chart__table-amount">$31.07</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Fri</td>
+                <td class="chart__table-amount">$23.39</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Sat</td>
+                <td class="chart__table-amount">$43.28</td>
+              </tr>
+              <tr>
+                <td class="chart__table-day">Sun</td>
+                <td class="chart__table-amount">$25.48</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="chart__footer">
+            <p class="chart__total">
+              Total this month
+              <span class="chart__total-amount">$478.33</span>
+            </p>
+            <p class="chart__percentage">
+              <span class="chart__percentage-value">+2.4%</span>
+              <span>from last month</span>
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="main-footer">
       <p>
