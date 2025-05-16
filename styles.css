@@ -1,14 +1,15 @@
 :root {
   /* Colors */
+  --blue-200: #c8e1e4;
   --blue-500: hsl(186 34% 65%);
-  --brown-400: hsl(28 10% 53%);
   --brown-950: hsl(25 47% 15%);
   --cream-bg: hsl(27 66% 92%);
   --off-white: hsl(33 100% 98%);
   --red-100: hsl(26 66% 93%);
-  /* --red-500: hsl(10 79% 65%); */
-  --red-500: hsl(16 100% 42%);
   --white: hsl(0 0% 100%);
+  /* Changed colors to meet AA contrast ratio */
+  --brown-400: hsl(28 9% 41%);
+  --red-500: hsl(348 83% 47%);
 
   /* Radius */
   --radius-xs: 0.1875rem;
@@ -83,6 +84,7 @@ a:focus {
 }
 
 a:hover {
+  color: var(--brown-950);
   text-decoration: none;
 }
 
@@ -157,6 +159,7 @@ main {
 .chart__balance {
   color: var(--white);
   font: var(--text-2-mobile);
+  font-weight: 500;
   letter-spacing: 0.01em;
 }
 
@@ -167,11 +170,25 @@ main {
   width: 100%;
 }
 
-.chart__table caption {
+.chart__table-caption {
   color: var(--brown-950);
   font: var(--text-2-mobile);
-  margin-block-end: var(--spacing-150);
   text-align: left;
+}
+
+.chart__table-day {
+  font: var(--text-4-mobile);
+}
+
+.chart__table-amount {
+  --color: var(--red-500);
+  border-radius: var(--radius-xs);
+  transition: opacity 200ms ease;
+}
+
+.chart__table-amount:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .chart__footer {
@@ -203,6 +220,10 @@ main {
   font: var(--text-3-bold-mobile);
 }
 
+.striped {
+  --color: repeating-linear-gradient(135deg, var(--blue-200) 0px, var(--blue-200) 6px, var(--blue-500) 6px, var(--blue-500) 12px);
+}
+
 .main-footer {
   font: var(--text-4-mobile);
   text-align: center;
@@ -228,9 +249,12 @@ main {
     padding-inline: var(--spacing-600);
   }
 
-  .chart__table caption {
+  .chart__table-caption {
     font: var(--text-2);
-    margin-block-end: var(--spacing-250);
+  }
+
+  .chart__table-day {
+    font: var(--text-4);
   }
 
   .chart__footer {
@@ -243,5 +267,9 @@ main {
 
   .chart__percentage-value {
     font: var(--text-3-bold);
+  }
+
+  .main-footer {
+    font: var(--text-4);
   }
 }

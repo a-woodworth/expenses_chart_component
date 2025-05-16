@@ -23,6 +23,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- Charts.css CDN Link - https://chartscss.org -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Expenses Chart Component</title>
   </head>
@@ -46,8 +51,10 @@
           />
         </div>
         <div class="chart-table-wrapper">
-          <table class="chart__table">
-            <caption>
+          <table
+            class="chart__table charts-css column show-heading hide-data show-labels data-spacing-8"
+          >
+            <caption class="chart__table-caption">
               Spending - Last 7 days
             </caption>
             <thead>
@@ -58,32 +65,67 @@
             </thead>
             <tbody>
               <tr>
-                <td class="chart__table-day">Mon</td>
-                <td class="chart__table-amount">$17.45</td>
+                <th scope="row" class="chart__table-day">Mon</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(17.45 / 100)"
+                >
+                  <span class="data">$17.45</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Tue</td>
-                <td class="chart__table-amount">$34.91</td>
+                <th scope="row" class="chart__table-day">Tue</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(34.91 / 100)"
+                >
+                  <span class="data">$34.91</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Wed</td>
-                <td class="chart__table-amount">$52.36</td>
+                <th scope="row" class="chart__table-day">Wed</th>
+                <td
+                  class="chart__table-amount striped"
+                  style="--size: calc(52.36 / 100)"
+                >
+                  <span class="data">$52.36</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Thu</td>
-                <td class="chart__table-amount">$31.07</td>
+                <th scope="row" class="chart__table-day">Thu</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(31.07 / 100)"
+                >
+                  <span class="data">$31.07</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Fri</td>
-                <td class="chart__table-amount">$23.39</td>
+                <th scope="row" class="chart__table-day">Fri</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(23.39 / 100)"
+                >
+                  <span class="data">$23.39</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Sat</td>
-                <td class="chart__table-amount">$43.28</td>
+                <th scope="row" class="chart__table-day">Sat</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(43.28 / 100)"
+                >
+                  <span class="data">$43.28</span>
+                </td>
               </tr>
               <tr>
-                <td class="chart__table-day">Sun</td>
-                <td class="chart__table-amount">$25.48</td>
+                <th scope="row" class="chart__table-day">Sun</th>
+                <td
+                  class="chart__table-amount"
+                  style="--size: calc(25.48 / 100)"
+                >
+                  <span class="data">$25.48</span>
+                </td>
               </tr>
             </tbody>
           </table>
