@@ -115,18 +115,21 @@ body {
 }
 
 main {
+  max-width: 33.75rem;
   width: 100%;
 }
 
+tbody {
+  min-height: 15.25rem;
+}
+
 .chart {
-  max-width: 33.75rem;
-  margin: auto;
+  margin-inline: var(--spacing-200);
 }
 
 .chart__header,
 .chart-table-wrapper {
   border-radius: var(--radius-m);
-  margin-inline: var(--spacing-200);
 }
 
 .chart__header {
@@ -186,7 +189,7 @@ main {
   transition: opacity 200ms ease;
 }
 
-.chart__table-amount:hover {
+.chart__table-amount:hover:not(.tooltip) {
   cursor: pointer;
   opacity: 0.5;
 }
@@ -220,8 +223,14 @@ main {
   font: var(--text-3-bold-mobile);
 }
 
-.striped {
-  --color: repeating-linear-gradient(135deg, var(--blue-200) 0px, var(--blue-200) 6px, var(--blue-500) 6px, var(--blue-500) 12px);
+.highlight {
+  --color: repeating-linear-gradient(
+    135deg,
+    var(--blue-200) 0px,
+    var(--blue-200) 6px,
+    var(--blue-500) 6px,
+    var(--blue-500) 12px
+  );
 }
 
 .main-footer {
@@ -230,7 +239,30 @@ main {
   text-wrap: balance;
 }
 
+tbody td {
+  transform-origin: bottom;
+  animation: revealing-bars 2s linear;
+}
+
+@keyframes revealing-bars {
+  0% {
+    transform: scaleY(0);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+}
+
 @media (min-width: 33.75rem) {
+  .chart__header,
+  .chart-table-wrapper {
+    border-radius: var(--radius-l);
+  }
+
+  .chart {
+    margin-inline: auto;
+  }
+
   .chart__heading {
     font: var(--text-3);
   }
@@ -262,7 +294,7 @@ main {
   }
 
   .chart__total-amount {
-    var(--text-1);
+    font: var(--text-1);
   }
 
   .chart__percentage-value {
