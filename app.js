@@ -15,7 +15,7 @@ function getDayOfWeek() {
     currentDayColumn = chartDays[6].nextElementSibling;
   } else {
     // Subtract 1 to get the correct chart column amount
-    currentDayColumn = chartDays[dayOfWeek].nextElementSibling;
+    currentDayColumn = chartDays[dayOfWeek - 1].nextElementSibling;
   }
 
   // Add class to highlight the current day
