@@ -1,6 +1,6 @@
 import { getDayOfWeek } from './dayOfWeek.js';
 
-const url = './data.json';
+const url = '../../data.json';
 const tableBody = document.querySelector('.chart__table tbody');
 let chartDays;
 
