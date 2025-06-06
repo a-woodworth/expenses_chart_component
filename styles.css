@@ -1,7 +1,11 @@
 :root {
   /* Colors */
-  --blue-200: #c8e1e4;
-  --blue-500: hsl(186 34% 65%);
+  /* --blue-200: #c8e1e4; */
+  --blue-200: rgba(200, 225, 228, 1);
+  --blue-200-hover: rgba(200, 225, 228, 0.6);
+  /* --blue-500: hsl(186 34% 65%); */
+  --blue-500: rgba(135, 190, 196, 1);
+  --blue-500-hover: rgba(135, 190, 196, 0.6);
   --brown-950: hsl(25 47% 15%);
   --cream-bg: hsl(27 66% 92%);
   --off-white: hsl(33 100% 98%);
@@ -9,7 +13,9 @@
   --white: hsl(0 0% 100%);
   /* Changed colors to meet AA contrast ratio */
   --brown-400: hsl(28 9% 41%);
-  --red-500: hsl(348 83% 47%);
+  /* --red-500: hsl(348 83% 47%); */
+  --red-500: rgba(219, 20, 60, 1);
+  --red-500-hover: rgba(219, 20, 60, 0.6);
 
   /* Radius */
   --radius-xs: 0.1875rem;
@@ -123,6 +129,11 @@ tbody {
   min-height: 15.25rem;
 }
 
+tr:focus-visible {
+  outline: solid 2px currentColor;
+  outline-offset: 2px;
+}
+
 .chart {
   margin-inline: var(--spacing-200);
 }
@@ -189,9 +200,41 @@ tbody {
   transition: opacity 200ms ease;
 }
 
-.chart__table-amount:hover:not(.tooltip) {
+.chart__table-amount:hover {
   cursor: pointer;
-  opacity: 0.5;
+}
+
+.chart__table-amount:focus > .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chart__table-amount:hover:not(.highlight),
+.chart__table-amount:focus:not(.highlight) {
+  --color: var(--red-500-hover);
+  outline-offset: 2px;
+}
+
+.chart__table-amount:hover:where(.highlight),
+.chart__table-amount:focus:where(.highlight) {
+  --color: repeating-linear-gradient(
+    135deg,
+    var(--blue-200-hover) 0px,
+    var(--blue-200-hover) 6px,
+    var(--blue-500-hover) 6px,
+    var(--blue-500-hover) 12px
+  );
+  outline-offset: 2px;
+}
+
+.highlight {
+  --color: repeating-linear-gradient(
+    135deg,
+    var(--blue-200) 0px,
+    var(--blue-200) 6px,
+    var(--blue-500) 6px,
+    var(--blue-500) 12px
+  );
 }
 
 .chart__footer {
@@ -223,16 +266,6 @@ tbody {
   font: var(--text-3-bold-mobile);
 }
 
-.highlight {
-  --color: repeating-linear-gradient(
-    135deg,
-    var(--blue-200) 0px,
-    var(--blue-200) 6px,
-    var(--blue-500) 6px,
-    var(--blue-500) 12px
-  );
-}
-
 .main-footer {
   font: var(--text-4-mobile);
   text-align: center;
@@ -251,6 +284,26 @@ tbody td {
   30% {
     transform: scaleY(1);
   }
+}
+
+/* Remove and customize some default charts.css styles from tooltip class */
+.charts-css .tooltip::after {
+  border: none;
+  content: unset;
+  left: unset;
+  margin-left: 0;
+  position: absolute;
+  top: unset;
+}
+
+.charts-css .tooltip {
+  background-color: var(--brown-950);
+  border-radius: var(--radius-s);
+  bottom: unset;
+  color: var(--off-white);
+  font-size: 1.125rem;
+  padding: var(--spacing-100);
+  top: -3rem;
 }
 
 @media (min-width: 33.75rem) {

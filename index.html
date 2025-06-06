@@ -6,6 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <meta
+      name="description"
+      content="a-woodworth's live version of Frontend Mentor's Expense Chart Component Challenge"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -37,9 +41,9 @@
       <h1 class="sr-only">
         Frugal Financial - Helping You Manage Your Expenses
       </h1>
-      <div class="chart">
+      <div class="chart" tabindex="0">
         <div class="chart__header">
-          <div class="chart-header-wrapper">
+          <div class="chart-header-wrapper" tabindex="0">
             <h2 class="chart__heading">My balance</h2>
             <p class="chart__balance">$921.48</p>
           </div>
@@ -54,7 +58,7 @@
           <table
             class="chart__table charts-css column show-heading hide-data show-labels data-spacing-8"
           >
-            <caption class="chart__table-caption">
+            <caption class="chart__table-caption" tabindex="0">
               Spending - Last 7 days
             </caption>
             <thead>
@@ -64,93 +68,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row" class="chart__table-day">mon</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(17.45 / 100)"
-                >
-                  <span class="data">$17.45</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $17.45
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">tue</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(34.91 / 100)"
-                >
-                  <span class="data">$34.91</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $34.91
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">wed</th>
-                <td
-                  class="chart__table-amount striped"
-                  style="--size: calc(52.36 / 100)"
-                >
-                  <span class="data">$52.36</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $52.36
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">thu</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(31.07 / 100)"
-                >
-                  <span class="data">$31.07</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $31.07
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">fri</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(23.39 / 100)"
-                >
-                  <span class="data">$23.39</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $23.39
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">sat</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(43.28 / 100)"
-                >
-                  <span class="data">$43.28</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $43.28
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="chart__table-day">sun</th>
-                <td
-                  class="chart__table-amount"
-                  style="--size: calc(25.48 / 100)"
-                >
-                  <span class="data">$25.48</span>
-                  <span class="tooltip" aria-hidden="true">
-                    $25.48
-                  </span>
-                </td>
-              </tr>
+              <!-- JSON data will be inserted here -->
             </tbody>
           </table>
-          <div class="chart__footer">
+          <div class="chart__footer" tabindex="0">
             <p class="chart__total">
               Total this month
               <span class="chart__total-amount">$478.33</span>
@@ -172,6 +93,6 @@
         <a href="https://github.com/a-woodworth">a-woodworth</a>.
       </p>
     </footer>
-    <script src="app.js"></script>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
