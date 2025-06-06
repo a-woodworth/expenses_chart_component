@@ -1,4 +1,4 @@
-import { getDayOfWeek } from './dayOfWeek.js';
+import { getDayOfWeek } from './utils/dayOfWeek.js';
 
 const url = './data.json';
 const tableBody = document.querySelector('.chart__table tbody');
