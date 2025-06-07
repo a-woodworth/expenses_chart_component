@@ -1,9 +1,7 @@
 :root {
   /* Colors */
-  /* --blue-200: #c8e1e4; */
   --blue-200: rgba(200, 225, 228, 1);
   --blue-200-hover: rgba(200, 225, 228, 0.6);
-  /* --blue-500: hsl(186 34% 65%); */
   --blue-500: rgba(135, 190, 196, 1);
   --blue-500-hover: rgba(135, 190, 196, 0.6);
   --brown-950: hsl(25 47% 15%);
@@ -13,7 +11,6 @@
   --white: hsl(0 0% 100%);
   /* Changed colors to meet AA contrast ratio */
   --brown-400: hsl(28 9% 41%);
-  /* --red-500: hsl(348 83% 47%); */
   --red-500: rgba(219, 20, 60, 1);
   --red-500-hover: rgba(219, 20, 60, 0.6);
 
@@ -127,11 +124,6 @@ main {
 
 tbody {
   min-height: 15.25rem;
-}
-
-tr:focus-visible {
-  outline: solid 2px currentColor;
-  outline-offset: 2px;
 }
 
 .chart {
