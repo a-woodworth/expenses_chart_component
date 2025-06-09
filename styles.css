@@ -304,6 +304,13 @@ tbody td {
     border-radius: var(--radius-l);
   }
 
+  .chart__header {
+    margin-block-end: var(--spacing-350);
+    padding-block-start: var(--spacing-400);
+    padding-block-end: var(--spacing-400);
+    padding-inline: var(--spacing-500);
+  }
+
   .chart {
     margin-inline: auto;
   }
@@ -324,6 +331,11 @@ tbody td {
     padding-block-start: var(--spacing-500);
     padding-block-end: var(--spacing-600);
     padding-inline: var(--spacing-600);
+  }
+
+  .chart__table {
+    margin-block-end: var(--spacing-400);
+    padding-block-end: var(--spacing-400);
   }
 
   .chart__table-caption {
