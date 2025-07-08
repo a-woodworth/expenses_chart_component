@@ -1,11 +1,14 @@
 # Frontend Mentor - Expenses chart component solution
 
-This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt).
+This solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt) uses the Charts.css data visualization framework. Color modifications have been made that differ from the design to meet accessible color contrast ratios.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+  - [Built with](#built-with)
 
 ## Overview
 
@@ -18,3 +21,25 @@ Users should be able to:
 - View the optimal layout for the content depending on their device’s screen size
 - See hover states for all interactive elements on the page
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
+
+### Screenshots
+
+**Desktop**
+
+![Desktop Sceenshot](assets/screenshots/desktop-screenshot-1440px.png)
+
+**Mobile**
+
+![Mobile Sceenshot](assets/screenshots/mobile-screenshot-375px.png)
+
+### Links
+
+- Solution URL: [Solution]()
+- Live Site URL: [Live Site](https://a-woodworth.github.io/expenses_chart_component)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS Custom properties (variables)
+- JavaScript
+- [Charts.css](https://chartscss.org) - CSS Data Visualization Framework
