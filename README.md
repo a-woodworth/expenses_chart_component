@@ -26,11 +26,11 @@ Users should be able to:
 
 **Desktop**
 
-![Desktop Sceenshot](assets/screenshots/desktop-screenshot-1440px.png)
+![Desktop Sceenshot](screenshots/desktop-screenshot-1440px.png)
 
 **Mobile**
 
-![Mobile Sceenshot](assets/screenshots/mobile-screenshot-375px.png)
+![Mobile Sceenshot](screenshots/mobile-screenshot-375px.png)
 
 ### Links
 
