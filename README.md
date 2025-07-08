@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/expenses-chart-component----chartscss-framework-and-javascript-_01GwTWpG5)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/expenses_chart_component)
 
 ### Built with
